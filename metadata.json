@@ -1,0 +1,7 @@
+{
+  "name": "CineFlix Movies",
+  "description": "Bollywood, Hollywood Hindi Dubbed, 90s Classics, Tagalog, and Bengali movie streaming portal connected to GitHub metadata feed.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
