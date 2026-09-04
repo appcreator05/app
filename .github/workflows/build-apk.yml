@@ -21,7 +21,11 @@ jobs:
           cache: 'npm'
 
       - name: Install NPM Dependencies
-        run: npm ci || npm install
+        run: |
+          if [ -f "bun.lock" ]; then
+            npm install --package-lock-only || true
+          fi
+          npm install
 
       - name: Build Web Application
         run: npm run build
