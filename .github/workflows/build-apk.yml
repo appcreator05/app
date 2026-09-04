@@ -22,9 +22,6 @@ jobs:
 
       - name: Install NPM Dependencies
         run: |
-          if [ -f "bun.lock" ]; then
-            npm install --package-lock-only || true
-          fi
           npm install
 
       - name: Build Web Application
@@ -55,7 +52,7 @@ jobs:
           if [ -d "android" ]; then
             cd android
             chmod +x gradlew
-            ./gradlew assembleDebug --stacktrace
+            ./gradlew clean assembleDebug --stacktrace
           else
             echo "Android directory not found."
             exit 1
